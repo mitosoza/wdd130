@@ -45,6 +45,7 @@ h1 {
 
 .about {
   position: absolute;
+  width: 100%;
   top: 25px;
 	left: 0px;
 }
