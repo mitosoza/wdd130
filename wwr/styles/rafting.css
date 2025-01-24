@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #FB8500;
+  --secondary-color: #023047;
+  --accent1-color: #FFB703;
+  --accent2-color: #219EBC;
+  --heading-font: 'Bebas Neue', sans-serif;
+  --text-font: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--text-font);
+  margin: 0 3rem;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--accent1-color);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+	width: 100%;
+	height: auto;
+
+}
+
+.overlay {
+  background: rgba(46, 49, 44, 0.7);
+}
+
+.about {
+  position: absolute;
+  top: 25px;
+	left: 0px;
+}
+
+article {
+  display: inline-block;
+  margin: 0.5rem 7rem;
+  color: #fff;
+  background: rgba(205, 221, 105, 0.7);
+}
+
+.hero article img {
+  float: right;
+  padding: 1rem;
+  margin-left: 10px;
+  width: 200px;
+  height: auto;
+}
+
+.adventure-pics {
+  display: flex;
+  flex-direction: column;
+}
+
+.adventure-pics img {
+  width: 600px;
+  height: auto;
+  padding-bottom: 1rem;
+}
