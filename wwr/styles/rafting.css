@@ -9,14 +9,57 @@
 
 body {
   font-family: var(--text-font);
-  margin: 0 3rem;
   padding: 0;
 }
 
-nav a {
+/* Header ----- */
+header {
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  background-color: #219ebc;
+}
+
+#logo {
+  margin-left: 7rem;
+	justify-self: center;
+  width: 200px;
+	height: auto;
+  border: 2px solid #023047;
+}
+
+nav {
+  margin: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+.navigation a {
+  flex: 1 1 auto;
+	font-size: 1.2rem;
+  background-color: #356eb1;
+  border: 1px solid #023047;
+  padding: 0.5rem 3rem;
+  color: #fff;
   text-decoration: none;
 }
 
+.navigation a:hover {
+	color: #ffb703;
+  background-color: #023047;
+}
+
+/* Main ----- */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--accent1-color);
@@ -28,6 +71,9 @@ h1 {
   padding: 1rem 0;
 }
 
+main {
+  margin: 1.5rem 3rem;
+}
 .hero {
   position: relative;
   text-align: center;
@@ -65,13 +111,75 @@ article {
   height: auto;
 }
 
-.adventure-pics {
-  display: flex;
-  flex-direction: column;
+.history-section{
+  text-align: center;
+  margin: 2rem 0;
 }
 
-.adventure-pics img {
-  width: 600px;
+.history-section h2 {
+  margin: 1rem;
+}
+
+.history-content {
+  display: flex;
+  justify-content: center;
+}
+
+.history-content p {
+  flex: 1;
+  text-align: left;
+  margin: 0;
+}
+
+.history-content img {
+  width: 150px;
   height: auto;
-  padding-bottom: 1rem;
+  padding: 0 1.5rem;
+}
+
+.adventure-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.adventure-section h2 {
+  margin: 1rem;
+}
+
+.adventure-content {
+  display: flex;
+  justify-content: center;
+}
+
+.adventure-content figure {
+  margin-top: 0;
+}
+
+.adventure-content img {
+  width: 250px;
+  height: auto;
+}
+
+/* Footer ----- */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  background-color: #219ebc;
+}
+
+footer .spacer,
+footer nav {
+  flex: 1;
+}
+
+footer nav a img{
+  margin-left: 1rem;
+  width: 50px;
+  height: auto;
+  border: 1px solid #fff;
+  border-radius: 50%;
 }
