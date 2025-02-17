@@ -3,6 +3,8 @@
   --secondary-color: #023047;
   --accent1-color: #FFB703;
   --accent2-color: #219EBC;
+  --accent3-color: #356eb1;
+  --accent4-color: #023047;
   --heading-font: 'Bebas Neue', sans-serif;
   --text-font: 'Roboto', sans-serif;
 }
@@ -19,7 +21,7 @@ header {
   grid-template-columns: auto 1fr;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  background-color: #219ebc;
+  background-color: var(--accent2-color);
 }
 
 #logo {
@@ -27,7 +29,7 @@ header {
 	justify-self: center;
   width: 200px;
 	height: auto;
-  border: 2px solid #023047;
+  border: 2px solid var(--accent4-color);
 }
 
 nav {
@@ -47,8 +49,8 @@ nav {
 .navigation a {
   flex: 1 1 auto;
 	font-size: 1.2rem;
-  background-color: #356eb1;
-  border: 1px solid #023047;
+  background-color: var(--accent3-color);
+  border: 1px solid var(--accent4-color);
   padding: 0.5rem 3rem;
   color: #fff;
   text-decoration: none;
@@ -57,7 +59,7 @@ nav {
 .navigation .active,
 .navigation a:hover {
 	color: #ffb703;
-  background-color: #023047;
+  background-color: var(--accent4-color);
 }
 
 /* Main ----- */
@@ -72,10 +74,122 @@ h1 {
   padding: 1rem 0;
 }
 
+h6 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0.25rem;
+}
+
 main {
   margin: 1.5rem 3rem;
 }
 
+/* Home ----- */
+.home article {
+  margin: 0.5rem 7rem;
+  padding: 1rem;
+  color: #fff;
+  float: right;
+
+  .button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--accent3-color);
+    border: none;
+    margin-top: 0.5rem;
+    padding: 1rem 3rem;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    color: var(--accent1-color);
+    background-color: var(--accent4-color);
+    cursor: pointer;
+  }
+}
+
+.purpose-section, .offerings-section {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.purpose-section .offerings-content, .offerings-section .offerings-content {
+  display: contents;
+}
+
+.purpose-section figure, .offerings-section figure {
+  grid-column: 1;
+  text-align: right;
+}
+
+.purpose-section figure img,
+.offerings-section figure img {
+  width: 400px;
+  height: auto;
+}
+
+.purpose-section p, .offerings-section p {
+  grid-column: 2;
+}
+
+.subscribe-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.subscribe-section h2 {
+  margin: 1rem;
+}
+
+.subscribe-section form {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe-section form table {
+  width: 60%;
+}
+
+.subscribe-section form table td:first-child {
+  width: 50%;
+  padding: 0.4rem;
+}
+
+.subscribe-section form table td:last-child {
+  width: 50%;
+}
+.subscribe-section form table label {
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.subscribe-section form table input {
+  display: block;
+  padding-right: 10px;
+}
+
+.subscribe-section form table input[type="submit"] {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--accent3-color);
+  color: #fff;
+  border: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem 2rem;
+
+  &:hover {
+    color: var(--accent1-color);
+    background-color: var(--accent4-color);
+    cursor: pointer;
+  }
+}
 /* About ----- */
 .hero {
   position: relative;
@@ -92,14 +206,16 @@ main {
   background: rgba(46, 49, 44, 0.7);
 }
 
-.about {
+.home,
+.about,
+.trips {
   position: absolute;
   width: 100%;
   top: 25px;
 	left: 0px;
 }
 
-article {
+.about article {
   display: inline-block;
   margin: 0.5rem 7rem;
   color: #fff;
@@ -163,6 +279,71 @@ article {
   height: auto;
 }
 
+/* Trips ----- */
+.trips article {
+  margin: 0.5rem 7rem;
+  padding: 3rem;
+  background: rgba(46, 49, 44, 0.7);
+  color: #fff;
+  float: left;
+
+  .button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--accent3-color);
+    border: none;
+    margin-top: 0.5rem;
+    padding: 1rem 3rem;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    color: var(--accent1-color);
+    background-color: var(--accent4-color);
+    cursor: pointer;
+  }
+}
+
+.trips-section table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px;
+}
+
+.trips-section table td {
+  vertical-align: top;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  margin: 1.5rem 0;
+  font-size: 1.2em;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+  flex-grow: 1;
+}
+
+
 /* Contact ----- */
 .contact-info,
 .contact-employees {
@@ -212,7 +393,7 @@ footer {
   text-align: center;
   padding: 1rem;
   color: #fff;
-  background-color: #219ebc;
+  background-color: var(--accent2-color);
 }
 
 footer .spacer,
